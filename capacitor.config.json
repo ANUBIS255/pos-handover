@@ -1,0 +1,6 @@
+{
+  "appId": "com.poshandover.app",
+  "appName": "POS Handover",
+  "webDir": "www",
+  "bundledWebRuntime": false
+}
