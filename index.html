@@ -22,10 +22,18 @@
     <div class="checks"><label><input type="checkbox" name="charger"> شاحن</label><label><input type="checkbox" name="battery"> بطارية</label><label><input type="checkbox" name="sim"> شريحة خط</label></div>
     <div class="section-title small">الموقع الجغرافي</div>
     <div class="gps"><span id="gpsStatus">لم يتم تحديد الموقع</span><button type="button" class="secondary" id="gpsBtn">تحديد موقعي</button></div>
-    <input type="hidden" name="lat"><input type="hidden" name="lng">
+    <label>الإحداثيات الجغرافية
+      <div class="coord-grid">
+        <input name="lat" inputmode="decimal" placeholder="خط العرض" readonly>
+        <input name="lng" inputmode="decimal" placeholder="خط الطول" readonly>
+      </div>
+    </label>
     <label>صورة المستند (JPG) <input id="photo" type="file" accept="image/jpeg,image/*" capture="environment"></label>
     <img id="preview" class="preview hidden" alt="معاينة الصورة">
-    <label class="ack"><input type="checkbox" name="ack" required> أقر بأن بيانات المحضر تم تأكيدها والموافقة عليها من التاجر، وذلك في حضور مندوب المنطقة السابق ومشرف المنطقة.</label>
+    <div class="ack-group">
+      <label class="ack"><input type="checkbox" name="noDues" required> أقرّ أنا التاجر بأنه لا توجد لي أي مستحقات مالية أو مبالغ نقدية لدى مستلم المنطقة الجديد، ولا توجد أي مبالغ أو عهد مالية معلّقة في ذمته لصالحـي حتى تاريخ تحرير هذا المحضر، وذلك بعد المراجعة والتأكيد.</label>
+      <label class="ack"><input type="checkbox" name="ack" required> أقرّ بأن جميع البيانات والإقرارات الواردة بهذا المحضر قد تمت مراجعتها وتأكيدها والموافقة عليها من جانبي، وذلك في حضور مندوب المنطقة السابق ومشرف المنطقة.</label>
+    </div>
     <button class="primary" type="submit">حفظ المحضر</button>
     <p class="hint">يُحفظ السجل على هذا الجهاز دون الحاجة إلى الإنترنت. احتفظ بنسخة احتياطية من بياناتك بانتظام.</p>
   </form>

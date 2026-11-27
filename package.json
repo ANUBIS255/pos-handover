@@ -4,13 +4,16 @@
   "private": true,
   "description": "Arabic POS machine handover records app",
   "scripts": {
-    "build": "node -e \"console.log('Static app ready')\""
+    "build": "mkdir -p www && cp index.html styles.css manifest.webmanifest sw.js www/ && esbuild app.js --bundle --format=iife --outfile=www/app.js"
   },
   "dependencies": {
     "@capacitor/android": "^7.4.3",
-    "@capacitor/core": "^7.4.3"
+    "@capacitor/core": "^7.4.3",
+    "@capacitor/geolocation": "^7.1.5",
+    "@capacitor/filesystem": "^7.1.4"
   },
   "devDependencies": {
-    "@capacitor/cli": "^7.4.3"
+    "@capacitor/cli": "^7.4.3",
+    "esbuild": "^0.25.0"
   }
 }
